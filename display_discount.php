@@ -1,7 +1,7 @@
 <?php
-$product_description = $_POST['product_description'];
-$list_price = $_POST['list_price'];
-$discount_percent = $_POST['discount_percent'];
+$product_description = filter_input(INPUT_POST, 'product_description');
+$list_price = filter_input(INPUT_POST, 'list_price', FILTER_VALIDATE_FLOAT);
+$discount_percent = filter_input(INPUT_POST, 'discount_percent', FILTER_VALIDATE_FLOAT);
 ?>
 <!DOCTYPE html>
 <html>
